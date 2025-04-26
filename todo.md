@@ -36,5 +36,5 @@
 ## Testes e Implantação
 - [x] Testar site em diferentes navegadores
 - [x] Verificar responsividade em diferentes dispositivos
-- [ ] Implantar site
-- [ ] Compartilhar URL com o usuário
+- [x] Implantar site
+- [x] Compartilhar URL com o usuário
