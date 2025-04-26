@@ -774,6 +774,40 @@ footer {
   margin-top: 50px;
 }
 
+/* Banner de página */
+.page-banner {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--header-height);
+  color: white;
+  text-align: center;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
   :root {
