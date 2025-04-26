@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fã Clube Bobbyzera - Contato</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="../images/bobbyzera_logo.jpeg" alt="Logo Bobbyzera">
+                <img src="../images/bobbyzera_profile.jpeg" alt="Logo Bobbyzera">
                 <h1>Fã Clube Bobbyzera</h1>
             </div>
             
@@ -36,151 +36,159 @@
         </div>
     </header>
 
-    <!-- Página Contato -->
-    <section class="page-header">
+    <!-- Banner -->
+    <section class="page-banner" style="background-image: url('../images/bobbyzera_youtube_banner.jpeg');">
         <div class="container">
             <h1>Contato</h1>
         </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contato Info -->
+    <section id="contato-info">
         <div class="container">
             <div class="section-title">
                 <h2>Entre em Contato</h2>
-                <p>Tem alguma sugestão, dúvida ou quer compartilhar algo com o fã clube?</p>
+                <p>Estamos aqui para ouvir você</p>
             </div>
             
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>bobbyzerafaclube@exemplo.com</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Localização</h3>
-                        <p>Rio de Janeiro, Brasil</p>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <h3>Horário das Lives</h3>
-                        <p>Segunda a Sexta, a partir das 17h</p>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://www.twitch.tv/bobbyzera" target="_blank" title="Twitch">
-                            <i class="fab fa-twitch"></i>
-                        </a>
-                        <a href="https://x.com/bobbyzera" target="_blank" title="X (Twitter)">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/bobbyzeraa" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/bobbyzeraa" target="_blank" title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCunAecRhgjAK-l9kbVuVtCw" target="_blank" title="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
+            <div class="contact-info">
+                <div class="contact-item fade-in">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>bobbyzerafaclube@exemplo.com</p>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" class="form-control" placeholder="Seu nome" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Seu email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Assunto da mensagem" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" placeholder="Sua mensagem" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="photo">Enviar Foto (opcional)</label>
-                            <input type="file" id="photo" class="form-control" accept="image/*">
-                            <small>Compartilhe uma foto sua com o Bobbyzera ou de algum momento especial!</small>
-                        </div>
-                        
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
+                <div class="contact-item fade-in">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Contato Profissional</h3>
+                    <p>bobbyzera@kr3w.gg</p>
+                </div>
+                
+                <div class="contact-item fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horário das Lives</h3>
+                    <p>Segunda a Sexta, a partir das 17h</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq-section bg-light">
+    <!-- Formulário de Contato -->
+    <section id="contato-form" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Envie uma Mensagem</h2>
+                <p>Compartilhe suas ideias, sugestões ou apenas diga olá</p>
+            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" class="form-control" placeholder="Seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Seu email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Assunto da mensagem" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" class="form-control" placeholder="Sua mensagem" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
         <div class="container">
             <div class="section-title">
                 <h2>Perguntas Frequentes</h2>
                 <p>Respostas para as dúvidas mais comuns</p>
             </div>
             
-            <div class="faq-content">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Este é o site oficial do Bobbyzera?</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Este é um site oficial do Bobbyzera?</div>
                     <div class="faq-answer">
-                        <p>Não, este é um site de fã clube criado por admiradores do trabalho do Bobbyzera. Não temos vínculo oficial com ele, mas somos fãs dedicados que criaram este espaço para celebrar seu conteúdo.</p>
+                        <p>Não, este é um site de fã clube não oficial criado por fãs dedicados ao Bobbyzera. Não temos afiliação direta com o Bobbyzera ou sua equipe.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Como posso assistir às lives do Bobbyzera?</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Como posso assistir às lives do Bobbyzera?</div>
                     <div class="faq-answer">
-                        <p>As lives do Bobbyzera acontecem de segunda a sexta, a partir das 17h, na plataforma Twitch. Você pode acessar o canal dele através do link: <a href="https://www.twitch.tv/bobbyzera" target="_blank">https://www.twitch.tv/bobbyzera</a></p>
+                        <p>As lives do Bobbyzera acontecem de segunda a sexta, a partir das 17h, na Twitch. Você pode acessar o canal dele através do link: <a href="https://www.twitch.tv/bobbyzera" target="_blank">https://www.twitch.tv/bobbyzera</a>.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Posso enviar fanarts ou outros conteúdos para o site?</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Como posso contribuir para o site?</div>
                     <div class="faq-answer">
-                        <p>Sim! Adoraríamos receber fanarts, fotos, vídeos ou qualquer outro conteúdo relacionado ao Bobbyzera. Você pode enviar através do formulário de contato nesta página ou pelo email bobbyzerafaclube@exemplo.com.</p>
+                        <p>Você pode contribuir enviando fotos, vídeos, sugestões ou correções para o email bobbyzerafaclube@exemplo.com. Toda contribuição é bem-vinda!</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Como faço para participar do fã clube?</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Quais são as redes sociais do Bobbyzera?</div>
                     <div class="faq-answer">
-                        <p>Não há um processo formal de inscrição. Se você é fã do Bobbyzera, já faz parte da comunidade! Você pode participar interagindo nas redes sociais, compartilhando conteúdo e participando das lives.</p>
+                        <p>O Bobbyzera está presente em várias redes sociais:</p>
+                        <ul>
+                            <li>Twitch: <a href="https://www.twitch.tv/bobbyzera" target="_blank">https://www.twitch.tv/bobbyzera</a></li>
+                            <li>YouTube: <a href="https://www.youtube.com/channel/UCunAecRhgjAK-l9kbVuVtCw" target="_blank">Lives do Bobbyzera [OFICIAL]</a></li>
+                            <li>TikTok: <a href="https://www.tiktok.com/@bobbyzeraa" target="_blank">@bobbyzeraa</a></li>
+                            <li>Instagram: <a href="https://www.instagram.com/bobbyzeraa" target="_blank">@bobbyzeraa</a></li>
+                            <li>X (Twitter): <a href="https://x.com/bobbyzera" target="_blank">@bobbyzera</a></li>
+                            <li>Facebook: <a href="https://www.facebook.com/bobbyzeraa" target="_blank">@bobbyzeraa</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>O Bobbyzera tem algum cronograma de conteúdo?</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Como entrar em contato com o Bobbyzera para assuntos profissionais?</div>
                     <div class="faq-answer">
-                        <p>Sim, o Bobbyzera costuma fazer lives de segunda a sexta, a partir das 17h. O conteúdo varia, mas geralmente inclui jogos como GTA RP e outros títulos populares. Para informações mais atualizadas, recomendamos seguir suas redes sociais.</p>
+                        <p>Para assuntos profissionais, você pode entrar em contato através do email: bobbyzera@kr3w.gg</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section id="redes-sociais" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Siga o Bobbyzera</h2>
+                <p>Acompanhe o Bobby em todas as redes sociais</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.twitch.tv/bobbyzera" target="_blank" title="Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://x.com/bobbyzera" target="_blank" title="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/bobbyzeraa" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/bobbyzeraa" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCunAecRhgjAK-l9kbVuVtCw" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@bobbyzeraa" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -208,7 +216,7 @@
                 
                 <div class="footer-column">
                     <h3>Contato</h3>
-                    <p>Email: bobbyzerafaclube@exemplo.com</p>
+                    <p>Contato Profissional: bobbyzera@kr3w.gg</p>
                     <div class="social-links">
                         <a href="https://www.twitch.tv/bobbyzera" target="_blank" title="Twitch">
                             <i class="fab fa-twitch"></i>
@@ -216,8 +224,8 @@
                         <a href="https://x.com/bobbyzera" target="_blank" title="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/bobbyzeraa" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.tiktok.com/@bobbyzeraa" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
@@ -231,72 +239,5 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script>
-        // Script específico para a página de contato
-        document.addEventListener('DOMContentLoaded', function() {
-            // Manipulação do formulário
-            const contactForm = document.getElementById('contactForm');
-            
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Simulação de envio de formulário
-                    const submitButton = this.querySelector('button[type="submit"]');
-                    const originalText = submitButton.textContent;
-                    
-                    submitButton.textContent = 'Enviando...';
-                    submitButton.disabled = true;
-                    
-                    // Simula um atraso de envio
-                    setTimeout(function() {
-                        // Exibe mensagem de sucesso
-                        const successMessage = document.createElement('div');
-                        successMessage.className = 'alert alert-success';
-                        successMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
-                        
-                        contactForm.reset();
-                        contactForm.parentNode.insertBefore(successMessage, contactForm);
-                        
-                        submitButton.textContent = originalText;
-                        submitButton.disabled = false;
-                        
-                        // Remove a mensagem após alguns segundos
-                        setTimeout(function() {
-                            successMessage.remove();
-                        }, 5000);
-                    }, 1500);
-                });
-            }
-            
-            // Toggle para as perguntas frequentes
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-                const toggleIcon = item.querySelector('.toggle-icon');
-                
-                question.addEventListener('click', function() {
-                    // Fecha todas as outras respostas
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.querySelector('.faq-answer').style.display = 'none';
-                            otherItem.querySelector('.toggle-icon').textContent = '+';
-                        }
-                    });
-                    
-                    // Toggle da resposta atual
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                        toggleIcon.textContent = '+';
-                    } else {
-                        answer.style.display = 'block';
-                        toggleIcon.textContent = '-';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

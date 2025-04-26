@@ -5,143 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fã Clube Bobbyzera - Galeria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Estilos específicos para a galeria */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 250px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .overlay {
-            transform: translateY(0);
-        }
-        
-        .gallery-filter {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .filter-btn {
-            background: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 8px 20px;
-            margin: 5px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary-color);
-            color: var(--secondary-color);
-        }
-        
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-        
-        .lightbox.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80vh;
-            border-radius: 5px;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        
-        .lightbox-nav {
-            position: absolute;
-            bottom: 20px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        
-        .lightbox-nav button {
-            background: var(--primary-color);
-            color: var(--secondary-color);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="../images/bobbyzera_logo.jpeg" alt="Logo Bobbyzera">
+                <img src="../images/bobbyzera_profile.jpeg" alt="Logo Bobbyzera">
                 <h1>Fã Clube Bobbyzera</h1>
             </div>
             
@@ -164,144 +36,106 @@
         </div>
     </header>
 
-    <!-- Página Galeria -->
-    <section class="page-header">
+    <!-- Banner -->
+    <section class="page-banner" style="background-image: url('../images/bobbyzera_youtube_banner.jpeg');">
         <div class="container">
             <h1>Galeria</h1>
         </div>
     </section>
 
-    <section class="gallery-section">
+    <!-- Galeria Section -->
+    <section id="galeria-main">
         <div class="container">
             <div class="section-title">
-                <h2>Momentos Inesquecíveis</h2>
-                <p>Uma coleção de imagens dos melhores momentos do Bobbyzera</p>
+                <h2>Galeria de Imagens</h2>
+                <p>Momentos inesquecíveis do Bobbyzera</p>
             </div>
             
-            <div class="gallery-filter">
+            <div class="gallery-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="streams">Streams</button>
-                <button class="filter-btn" data-filter="eventos">Eventos</button>
-                <button class="filter-btn" data-filter="personagens">Personagens</button>
-                <button class="filter-btn" data-filter="bastidores">Bastidores</button>
+                <button class="filter-btn" data-filter="stream">Streams</button>
+                <button class="filter-btn" data-filter="personagem">Personagens</button>
+                <button class="filter-btn" data-filter="evento">Eventos</button>
             </div>
             
-            <div class="gallery-grid">
-                <!-- As imagens serão substituídas por imagens reais quando disponíveis -->
-                <div class="gallery-item fade-in" data-category="streams">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Stream Bobbyzera">
-                    <div class="overlay">
-                        <h3>Live Especial</h3>
-                        <p>Momento da stream com mais de 10 mil espectadores</p>
-                    </div>
+            <div class="gallery">
+                <div class="gallery-item fade-in stream">
+                    <img src="../images/bobbyzera_profile.jpeg" alt="Bobbyzera">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="personagens">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Personagem Queridão">
-                    <div class="overlay">
-                        <h3>Queridão</h3>
-                        <p>Um dos personagens mais queridos do GTA RP</p>
-                    </div>
+                <div class="gallery-item fade-in personagem">
+                    <img src="../images/luqueta_video_thumbnail.webp" alt="Bobbyzera - Luqueta">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="eventos">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Evento Especial">
-                    <div class="overlay">
-                        <h3>Evento Especial</h3>
-                        <p>Encontro com fãs em evento de games</p>
-                    </div>
+                <div class="gallery-item fade-in personagem">
+                    <img src="../images/queridao_paulinho_thumbnail.avif" alt="Bobbyzera - Queridão">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="bastidores">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Bastidores">
-                    <div class="overlay">
-                        <h3>Bastidores</h3>
-                        <p>Preparação para uma stream especial</p>
-                    </div>
+                <div class="gallery-item fade-in personagem">
+                    <img src="../images/freddy_maluca_thumbnail.avif" alt="Bobbyzera - Freddy">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="personagens">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Personagem Freddy">
-                    <div class="overlay">
-                        <h3>Freddy Mercury</h3>
-                        <p>Momentos hilários do personagem Freddy</p>
-                    </div>
+                <div class="gallery-item fade-in stream">
+                    <img src="../images/bobbyzera_youtube_banner.jpeg" alt="Bobbyzera Banner">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="streams">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Momento Engraçado">
-                    <div class="overlay">
-                        <h3>Reação Épica</h3>
-                        <p>Momento que viralizou nas redes sociais</p>
-                    </div>
+                <div class="gallery-item fade-in evento">
+                    <img src="../images/bobbyzera_profile.jpeg" alt="Bobbyzera Evento">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="eventos">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Encontro de Streamers">
-                    <div class="overlay">
-                        <h3>Encontro de Streamers</h3>
-                        <p>Bobby com outros criadores de conteúdo</p>
-                    </div>
+                <div class="gallery-item fade-in stream">
+                    <img src="../images/luqueta_video_thumbnail.webp" alt="Bobbyzera Stream">
                 </div>
-                
-                <div class="gallery-item fade-in" data-category="bastidores">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Setup">
-                    <div class="overlay">
-                        <h3>Setup</h3>
-                        <p>O ambiente de trabalho do Bobby</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in" data-category="personagens">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Michael Jackson">
-                    <div class="overlay">
-                        <h3>Michael Jackson</h3>
-                        <p>Bobby interpretando o Rei do Pop</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in" data-category="streams">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Momento Tenso">
-                    <div class="overlay">
-                        <h3>Momento Tenso</h3>
-                        <p>Situação emocionante durante uma live</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in" data-category="eventos">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Convenção de Games">
-                    <div class="overlay">
-                        <h3>Convenção de Games</h3>
-                        <p>Bobby participando de painel em evento</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fade-in" data-category="bastidores">
-                    <img src="../images/bobbyzera_logo.jpeg" alt="Gravação">
-                    <div class="overlay">
-                        <h3>Gravação</h3>
-                        <p>Momento de gravação de conteúdo especial</p>
-                    </div>
+                <div class="gallery-item fade-in evento">
+                    <img src="../images/queridao_paulinho_thumbnail.avif" alt="Bobbyzera Evento">
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="Imagem ampliada">
-        <div class="lightbox-nav">
-            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </div>
-
-    <section class="cta-section">
+    <!-- Envie sua Foto -->
+    <section id="envie-foto" class="bg-light">
         <div class="container">
-            <div class="cta-content">
-                <h2>Envie sua foto!</h2>
-                <p>Tem uma foto com o Bobbyzera ou de algum momento especial? Compartilhe conosco!</p>
-                <a href="contato.html" class="btn">Enviar Foto</a>
+            <div class="section-title">
+                <h2>Envie sua Foto</h2>
+                <p>Compartilhe seus momentos com o Bobbyzera</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Você tem uma foto com o Bobbyzera ou alguma captura de tela de um momento especial das lives? Compartilhe conosco!</p>
+                    <p>Envie sua foto para o email <strong>bobbyzerafaclube@exemplo.com</strong> com o assunto "Galeria Fã Clube" e ela poderá ser publicada aqui em nossa galeria.</p>
+                    <p>Lembre-se de incluir seu nome e uma breve descrição da foto para que possamos dar os devidos créditos.</p>
+                    <a href="contato.html" class="btn">Entrar em Contato</a>
+                </div>
+                <div class="about-image">
+                    <img src="../images/bobbyzera_profile.jpeg" alt="Envie sua Foto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section id="redes-sociais" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Siga o Bobbyzera</h2>
+                <p>Acompanhe o Bobby em todas as redes sociais</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.twitch.tv/bobbyzera" target="_blank" title="Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://x.com/bobbyzera" target="_blank" title="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/bobbyzeraa" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/bobbyzeraa" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCunAecRhgjAK-l9kbVuVtCw" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@bobbyzeraa" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -329,7 +163,7 @@
                 
                 <div class="footer-column">
                     <h3>Contato</h3>
-                    <p>Email: bobbyzerafaclube@exemplo.com</p>
+                    <p>Contato Profissional: bobbyzera@kr3w.gg</p>
                     <div class="social-links">
                         <a href="https://www.twitch.tv/bobbyzera" target="_blank" title="Twitch">
                             <i class="fab fa-twitch"></i>
@@ -337,8 +171,8 @@
                         <a href="https://x.com/bobbyzera" target="_blank" title="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/bobbyzeraa" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://www.tiktok.com/@bobbyzeraa" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
@@ -352,92 +186,5 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script>
-        // Script específico para a galeria
-        document.addEventListener('DOMContentLoaded', function() {
-            // Filtro da galeria
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove classe active de todos os botões
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Adiciona classe active ao botão clicado
-                    this.classList.add('active');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Lightbox
-            const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = lightbox.querySelector('img');
-            const lightboxClose = lightbox.querySelector('.lightbox-close');
-            const prevBtn = lightbox.querySelector('.prev-btn');
-            const nextBtn = lightbox.querySelector('.next-btn');
-            let currentIndex = 0;
-            
-            // Abre o lightbox ao clicar em uma imagem
-            galleryItems.forEach((item, index) => {
-                item.addEventListener('click', function() {
-                    const imgSrc = this.querySelector('img').getAttribute('src');
-                    lightboxImg.setAttribute('src', imgSrc);
-                    currentIndex = index;
-                    lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Impede o scroll
-                });
-            });
-            
-            // Fecha o lightbox
-            lightboxClose.addEventListener('click', function() {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Permite o scroll novamente
-            });
-            
-            // Navegação do lightbox
-            prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-                const imgSrc = galleryItems[currentIndex].querySelector('img').getAttribute('src');
-                lightboxImg.setAttribute('src', imgSrc);
-            });
-            
-            nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % galleryItems.length;
-                const imgSrc = galleryItems[currentIndex].querySelector('img').getAttribute('src');
-                lightboxImg.setAttribute('src', imgSrc);
-            });
-            
-            // Fecha o lightbox ao clicar fora da imagem
-            lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) {
-                    lightbox.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Navegação com teclado
-            document.addEventListener('keydown', function(e) {
-                if (!lightbox.classList.contains('active')) return;
-                
-                if (e.key === 'Escape') {
-                    lightbox.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                } else if (e.key === 'ArrowLeft') {
-                    prevBtn.click();
-                } else if (e.key === 'ArrowRight') {
-                    nextBtn.click();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
